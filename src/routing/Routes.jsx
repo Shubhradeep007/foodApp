@@ -1,9 +1,11 @@
-import React from "react";
 import { createBrowserRouter } from "react-router-dom";
 import Wrapper from "../layout/Wrapper";
-import Home from "../pages/home/Home";
-import AboutPage from "../pages/about/AboutPage";
 import Menu from "../pages/Menu";
+import Home from "../pages/Home";
+import AboutPage from "../pages/AboutPage";
+import Chef from "../pages/Chef";
+import Blog from "../pages/Blog";
+import Contact from "../pages/Contact";
 
 const Routes = createBrowserRouter([
   {
@@ -15,12 +17,28 @@ const Routes = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "aboutus",
+        path: "home",
+        element: <Home />,
+      },
+      {
+        path: "about",
         element: <AboutPage />,
       },
       {
         path: "menu",
         element: <Menu/>,
+      },
+      {
+        path: "chef",
+        element: <Chef/>,
+      },
+      {
+        path: "blog",
+        element: <Blog/>,
+      },
+      {
+        path: "contact",
+        element: <Contact/>,
       }
     ],
   },

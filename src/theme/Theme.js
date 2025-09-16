@@ -25,10 +25,17 @@ const Theme = createTheme({
       fontWeight: 500,
       color: "#ffffff",
     },
+    h3: {
+      fontWeight: 600,
+      fontSize: "1.5625rem",
+      // color: "#D68240",
+      fontFamily: "Clash Display Variable"
+    },
     body1: {
       fontSize: "1rem",
       color: "#9C9D9B",
     },
+    
   },
   shape: {
     borderRadius: 12,
@@ -44,7 +51,8 @@ const Theme = createTheme({
         containedPrimary: {
           backgroundColor: "#D68240",
           "&:hover": {
-            backgroundColor: "#589881ff",
+            backgroundColor: "rgba(0, 0, 0, 0.1)",
+            color: "#D68240"
           },
         },
       },

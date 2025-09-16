@@ -1,4 +1,4 @@
-import React from "react";
+
 import {
   Box,
   Container,
@@ -14,8 +14,8 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
-import FooterImage from "../assets/Footer/Rectangle691.png"; // Make sure this path is correct
-import Logo from "../assets/Logo.png"; // Make sure this path is correct
+import FooterImage from "../assets/Footer/Rectangle691.png"; 
+import Logo from "../assets/Logo.png"; 
 
 const paymentIcons = [
   "https://img.icons8.com/color/48/000000/mastercard-logo.png",
@@ -98,8 +98,7 @@ const Footer = () => {
               }}
             >
               Lorem ipsum dolor sit amet consectetur. Tristique cursus morbi
-              nibh nec et vulputate. Turpis tortor nisi imperdiet quis
-              accumsan.
+              nibh nec et vulputate. Turpis tortor nisi imperdiet quis accumsan.
             </Typography>
             <Box>
               {socialButtons.map((social) => (

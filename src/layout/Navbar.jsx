@@ -12,7 +12,7 @@ const Navbar = () => {
   const menuJson = [
   { name: "Home", navLink: "/home" },
   { name: "Menu", navLink: "/menu" },
-  { name: "About Us", navLink: "/about-us" },
+  { name: "About Us", navLink: "/about" },
   { name: "Chef", navLink: "/chef" },
   { name: "Blog", navLink: "/blog" },
   { name: "Contact", navLink: "/contact" },

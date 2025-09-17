@@ -1,10 +1,14 @@
-import React from 'react'
-import Breadcrumb from '../layout/Breadcrumb'
+
+import Contacthome from './contact/Contacthome'
+import Getintouch from './contact/Getintouch'
+import Map from './contact/Map'
 
 const Contact = () => {
   return (
     <>
-        <Breadcrumb />
+        <Contacthome />
+        <Getintouch/>
+        <Map />
     </>
   )
 }

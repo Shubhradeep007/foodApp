@@ -1,12 +1,14 @@
-import React from 'react'
-import Breadcrumb from '../layout/Breadcrumb'
+
+import Bloghome from "./blog/Bloghome";
+import Latestblogs from "./blog/Latestblogs";
 
 const Blog = () => {
   return (
     <>
-    <Breadcrumb />
+      <Bloghome />
+      <Latestblogs />
     </>
-  )
-}
+  );
+};
 
-export default Blog
+export default Blog;

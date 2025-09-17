@@ -1,25 +1,29 @@
-import React from "react";
+import { useState } from "react";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
-import { Container, IconButton, Link } from "@mui/material";
+import { Container, IconButton, Link, Modal } from "@mui/material";
 import imageUnion from "../assets/nav-basket.png";
 import imageOodi from "../assets/oddi.png";
 import imageF from "../assets/F.png";
 import { useNavigate } from "react-router-dom";
+import LoginModal from "../pages/LoginModal";
 
 const Navbar = () => {
   const menuJson = [
-  { name: "Home", navLink: "/home" },
-  { name: "Menu", navLink: "/menu" },
-  { name: "About Us", navLink: "/about" },
-  { name: "Chef", navLink: "/chef" },
-  { name: "Blog", navLink: "/blog" },
-  { name: "Contact", navLink: "/contact" },
-];
+    { name: "Home", navLink: "/home" },
+    { name: "Menu", navLink: "/menu" },
+    { name: "About Us", navLink: "/about" },
+    { name: "Chef", navLink: "/chef" },
+    { name: "Blog", navLink: "/blog" },
+    { name: "Contact", navLink: "/contact" },
+  ];
 
-const navigate = useNavigate();
+  const navigate = useNavigate();
 
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
   return (
     <Container>
@@ -58,7 +62,6 @@ const navigate = useNavigate();
                   variant="body2"
                   underline="none"
                   onClick={() => navigate(value.navLink)}
-                 
                   sx={{
                     cursor: "pointer",
                     padding: "0.3rem",
@@ -73,7 +76,6 @@ const navigate = useNavigate();
                       border: "2px solid orange",
                       opacity: 0,
                       transition: "all 0.3s ease",
-                      
                     },
                     "&::before": {
                       top: 0,
@@ -113,12 +115,22 @@ const navigate = useNavigate();
                 left: "0.125rem",
               }}
             />
-            <Button color="primary" variant="contained">
+            <Button color="primary" variant="contained" onClick={handleOpen}>
               LOGIN
             </Button>
           </IconButton>
         </div>
       </header>
+      <Modal
+        open={open}
+        onClose={handleClose}
+        sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}
+      >
+        {/* We add a Box here to prevent focus issues and to wrap the component */}
+        <Box>
+          <LoginModal handleClose={handleClose} />
+        </Box>
+      </Modal>
     </Container>
   );
 };

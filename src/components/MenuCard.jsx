@@ -10,6 +10,7 @@ import {
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
 import StarIcon from "@mui/icons-material/Star";
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 
 const MenuCard = ({ card, handleRating }) => {
   return (
@@ -23,14 +24,13 @@ const MenuCard = ({ card, handleRating }) => {
     >
       <Box sx={{ position: "relative" }}>
         <CardMedia
-        
           component="img"
           height="220"
           image={card.image}
           alt={card.title}
           sx={{ mt: "8px", borderRadius: "15px" }}
         />
-        <IconButton
+        <FavoriteBorderIcon
           aria-label="add to favorites"
           sx={{
             position: "absolute",
@@ -38,13 +38,18 @@ const MenuCard = ({ card, handleRating }) => {
             right: 16,
             color: "white",
             backgroundColor: "#121A1D",
+            borderRadius: "50%",
+            width: 30,
+            height: 30,
+            padding: 1,
+            color: "#D68240",
             "&:hover": {
               backgroundColor: "rgba(255, 255, 255, 0.3)",
             },
           }}
         >
           <FavoriteIcon sx={{ color: "#D68240" }} />
-        </IconButton>
+        </FavoriteBorderIcon>
       </Box>
 
       <CardContent>

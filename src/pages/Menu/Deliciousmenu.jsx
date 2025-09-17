@@ -70,25 +70,25 @@ const Deliciousmenu = () => {
 
         <Box>
           <Stack direction="row" spacing={1} justifyContent="center">
-            <Button color="primary" variant="outlined">
+            <Button color="containedSecondary" variant="outlined">
               Indian
             </Button>
-            <Button color="primary" variant="outlined">
+            <Button color="containedSecondary" variant="outlined">
               Mexican
             </Button>
-            <Button color="primary" variant="outlined">
+            <Button color="containedSecondary" variant="outlined">
               Italian
             </Button>
-            <Button color="primary" variant="outlined">
+            <Button color="containedSecondary" variant="outlined">
               Chinese
             </Button>
-            <Button color="primary" variant="outlined">
+            <Button color="containedSecondary" variant="outlined">
               Bengali
             </Button>
-            <Button color="primary" variant="outlined">
+            <Button color="containedSecondary" variant="outlined">
               Arabian
             </Button>
-            <Button color="primary" variant="outlined">
+            <Button color="containedSecondary" variant="outlined">
               Japanese
             </Button>
           </Stack>

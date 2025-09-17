@@ -1,4 +1,4 @@
-import { backdropClasses, createTheme } from "@mui/material";
+import { backdropClasses, colors, createTheme } from "@mui/material";
 
 const Theme = createTheme({
   palette: {
@@ -12,9 +12,13 @@ const Theme = createTheme({
     primary: {
       main: "#D68240",
     },
+
+    secondary: {
+      main: "#121A1D"
+    }
   },
   typography: {
-    fontFamily: "'Poppins', sans-serif",
+    fontFamily: "'Class display Variable', Poppins",
     h1: {
       fontSize: "4rem",
       fontWeight: 600,
@@ -55,6 +59,15 @@ const Theme = createTheme({
             color: "#D68240"
           },
         },
+
+        containedSecondary: {
+          backgroundColor: "#121A1D",
+          "&:hover": {
+            backgroundColor: "rgba(0, 0, 0, 0.1)",
+            color: "#D68240"
+          },
+        },
+        
       },
     },
   },

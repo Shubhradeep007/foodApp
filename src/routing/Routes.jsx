@@ -6,6 +6,7 @@ import AboutPage from "../pages/AboutPage";
 import Chef from "../pages/Chef";
 import Blog from "../pages/Blog";
 import Contact from "../pages/Contact";
+import Singleblogpage from "../pages/Singleblogpage";
 
 const Routes = createBrowserRouter([
   {
@@ -39,6 +40,10 @@ const Routes = createBrowserRouter([
       {
         path: "contact",
         element: <Contact/>,
+      },
+      {
+        path: "single-blog",
+        element: <Singleblogpage/>,
       }
     ],
   },
